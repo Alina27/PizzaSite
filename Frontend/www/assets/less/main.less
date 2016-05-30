@@ -1,0 +1,285 @@
+//@mainColor: blue;
+
+@import "pizza/pizza-card";
+/*
+body{
+    background-color: beige;
+} */
+
+#headPanel{
+    position:fixed;
+    height: 90px;
+    background-color: black;
+    width: 100%;
+    z-index: 4;
+    opacity: 0.87;
+}
+
+.headPanelLine{
+    position:fixed;
+    width: 810px;
+    height: 1px;
+    left: 180px;
+    top: 25px;
+    border: none; /* Убираем границу */
+    background-color: darkgray; /* Цвет линии */
+}
+
+.number{
+    display:inline;
+    color: darkgrey;
+    position: fixed;
+    top: -4px;
+    left:175px;
+}
+
+.work_time{
+    display:inline;
+    color: darkgrey;
+    position: fixed;
+    top: 10px;
+    left:430px;  
+}
+
+.delivery_message{
+    display:inline;
+    color: darkgrey;
+    position: fixed;
+    top: 10px;
+    left:620px;
+}
+
+.pizza{
+    position: fixed;
+    color: darkgrey;
+    font-size: 20px;
+    left: 180px;
+    top: 40px;
+}
+
+#enterButton{
+   position: fixed;
+   top: 10px;
+   left:925px; 
+}
+
+#logo_head{
+    position: fixed;
+    height: 140px;
+    left:15px;
+    background-color:chocolate;
+    border: 70px solid transparent;	
+    border-bottom: 50px solid beige;
+    width: 8%;
+    text-align: center;
+    text-emphasis-position: above;
+    z-index: 5;
+    
+    
+}
+
+.logo_text{
+    position:fixed;
+    top: 16px;
+    left: 50px;
+    font-family: fantasy;
+    font-size: 25px;
+    color:white;
+}
+
+#orderPanel{
+    position:fixed;
+    right: 0px;
+    top: -100px;
+    height: 800px;
+    background-color: #F8F8F8;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    width: 25%;
+    z-index: 5;
+        
+}
+
+.mess1{
+    position: fixed;
+    top: 130px;
+    right: 70px;
+    font-family: inherit;
+    font-size: 17px;
+    color: gray;
+}
+
+.mess2{
+    position: fixed;
+    top: 150px;
+    right: 115px;
+    font-family: inherit;
+    font-size: 17px;
+    color: gray;
+}
+
+#orderPanel_header{
+    height: 190px;
+    background-color: white;
+    width: 100%;
+    z-index: 5;
+}
+
+#orders_logo{
+    position: fixed;
+    top: 30px;
+    right: 190px;
+    color: black;
+    font-size: 20px;
+}
+
+#cleanButton{
+    border: none;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background-color:white;
+    font-size: 12px;
+    color:darkgrey;
+}
+
+#orderPanel_footer{
+    position: fixed;
+    bottom:0px;
+    height: 90px;
+    background-color: white;
+    width: 80%;
+    z-index: 3;
+}
+
+#orderButton{
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    width: 250px;
+    height: 40px;  
+}
+
+.orderButton_text{
+    position: fixed;
+    bottom:30px;
+    right: 125px;
+}
+
+#allPizzas{
+    position:relative;
+    top: 110px;
+    left: 500px;
+    font-size: 30px;
+    color: black;
+}
+
+#tastesButton{ 
+    position:absolute;
+    top: 160px;
+    left:250px;
+    border: none;
+}
+
+#allPizzasButton{
+    background:beige;
+    color: orange;
+    border: none;
+}
+
+#allPizzasButton:hover{
+    background: orange;
+    color:#fff;
+}
+
+#meatPizzasButton{
+    background:beige;
+    color: orange;
+    border: none;
+}
+
+#meatPizzasButton:hover{
+    background: orange;
+    color:#fff;
+}
+
+#pineapplePizzasButton{   
+    background: beige;
+    color: orange;
+    border: none;
+}
+
+#pineapplePizzasButton:hover{
+    background: orange;
+    color:#fff;
+}
+
+#mushroomsPizzasButton{
+    background: beige;
+    color: orange;
+    border: none;
+}
+
+#mushroomsPizzasButton:hover{
+    background: orange;
+    color:#fff;
+}
+
+#seafoodPizzasButton{
+    background: beige;
+    color: orange;
+    border: none;
+}
+
+#seafoodPizzasButton:hover{
+    background: orange;
+    color:#fff;
+}
+
+#vegeterianPizzasButton{
+    background: beige;
+    color: orange;
+    border: none;
+}
+
+#vegeterianPizzasButton:hover{
+    background: orange;
+    color:#fff;
+}
+
+#discount_label{
+    position: fixed;
+    height: 150px;
+    width: 140px;;
+    background-color: chocolate;
+    z-index: 5;
+    bottom: 0px;
+    left: 20px;
+}  
+
+.discount_message{
+    position: fixed;
+    color: white;
+    font-family: sans-serif;
+    left: 50px;
+    top:510px;
+    font-size: 25px;
+}
+
+.label_line{
+   position:fixed;
+   width: 105px;
+   height: 1px;
+   border-style: dotted;
+          
+   top: 600px;
+   left: 35px;    
+}
+
+.discount_persent{
+    position: fixed;
+    color: white;
+    font-family: serif;
+    left: 65px;
+    top:620px;
+    
+}

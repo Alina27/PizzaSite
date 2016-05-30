@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+    
+<!--    
+<div id="cart"></div>
+<div class="container">
+    <div class="row" id="pizza_list">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_1.jpg">
+
+                <div class="caption"><h3>Thumbnail label</h3>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Button 2</a>
+                        <a href="#" class="btn btn-default">Button 1</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_2.jpg">
+
+                <div class="caption"><h3>Thumbnail label</h3>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Button 3</a>
+                        <a href="#" class="btn btn-default">Button 4</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_3.jpg">
+
+                <div class="caption"><h3>Thumbnail label</h3>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Button 5</a>
+                        <a href="#" class="btn btn-default">Button 6</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   -->
+    
+    
+   
+    
+    <div id = "headPanel">
+    <h3 class = "number"> (+380) 98 31 98 895 </h3>
+        <h5 class = "work_time">24 години/ днів на тиждень</h5>
+        <h4 class = "delivery_message">Безкоштовна доставка піци</h4>
+        <button type="button" class="btn btn-warning" id = "enterButton">Ввійти</button>
+        <hr class = "headPanelLine">
+        <h4 class = "pizza"> Pizza </h4>
+    </div>
+    
+    
+    <div id = "logo_head">
+        <h4 class = "logo_text"> Alina's <br> PIZZA </h4>
+    </div>
+   
+     <div class = "pizza-card">
+    <!--  <div class = mainContainer>
+-->
+    <div id = "discount_label">
+        <h3 class = "discount_message">Цього <br> тижня <br> на все </h3>  
+        <hr class="label_line"></hr>
+         <h4 class = "discount_persent"> -20%</h4>
+     </div>
+            
+    <a href="#" id = "allPizzas"> Усі піци <span class="badge progress-bar-warning"  id="allPizzas_num">8</span></a>
+    
+    <div class = "row">
+    <div class = "col-sm-6 col-md-4"> 
+            <div class = "thumbnail" id = "imrezza">  
+        <img src = "assets/images/pizza_2.jpg">
+                <span class = "label label-danger" id = "label_new">Нова</span>
+       <div class = "caption"> 
+                <h3 class = "pizzaName">Імпреза</h3>
+                <h6 class = "meatPizza">М'ясна піца</h6>
+                <p class = "pizzaDescription">
+                Балик, салямі, курка, сир моцарелла, сир рокфорд, шматки ананасу, томатна паста, петрушка
+                </p>
+           
+            <span class="glyphicon glyphicon-ban-circle" id = "impresaGly_1_1">30</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "impresaGly_1_2">370</span> 
+            
+            <h3 class = "impresaPriceF">99</h3>
+            <h3 class = "impresaPriceS">169</h3>
+            
+            <h5 class = "impresaHRN_1">грн</h5>
+            <h5 class = "impresaHRN_2">грн</h5>
+            
+           
+            <span class="glyphicon glyphicon-ban-circle" id = "impresaGly_2_1">40</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "impresaGly_2_2">660</span> 
+        
+               
+          </div> 
+            </div>
+       </div> 
+        
+        
+        <div class = "col-sm-6 col-md-4">
+            <div class = "thumbnail" id = "bbq">
+        <img src = "assets/images/pizza_9.jpg">
+                <span class = "label label-success" id = "label_popular">Популярна</span>
+                <div class = "caption">
+                <h3 class = "pizzaName">BBQ</h3>
+                <h6 class = "meatPizza">М'ясна піца</h6>
+                <p class = "pizzaDescription">
+                
+Мисливські ковбаски, ковбаски папероні, шинка, сир домашній, шампінйони, петрушка, оливки
+                </p>
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "bbqGly_1_1">30</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "bbqGly_1_2">460</span> 
+            
+            <h3 id = "bbqPrice_1">139</h3>
+            <h5 id = "bbqHRN_1">грн</h5>
+            
+                    
+                    
+            <span class="glyphicon glyphicon-ban-circle" id = "bbqGly_2_1">40</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "bbqGly_2_2">840</span> 
+            
+            <h3 id = "bbqPrice_2">199</h3>
+            <h5 id = "bbqHRN_2">грн</h5>
+                    
+            </div>
+                
+            </div>
+        </div>
+        
+        <div class = "col-sm-6 col-md-4">
+            <div class = "thumbnail" id ="mixedPolo">
+        <img src = "assets/images/pizza_1.jpg">
+                <div class = "caption">
+                <h3 class = "pizzaName">Міксовий поло</h3>
+                <h6 class = "meatPizza">М'ясна піца</h6>
+                <p class = "pizzaDescription">
+Шинка, курка копчена, сир моцарелла, шматки ананасу, кукурудза, петрушка, соус томатний
+                </p>
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "mixedPoloGly_1_1">30</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "mixedPoloGly_1_2">430</span> 
+            
+            <h3 id = "mixedPoloPriseF">115</h3>
+            <h5 id = "mixedPoloHRN_1">грн</h5>
+            
+                    
+                    
+            <span class="glyphicon glyphicon-ban-circle" id = "mixedPoloGly_2_1">40</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "mixedPoloGly_2_2">840</span> 
+            
+            <h3 id = "mixedPoloPriseS">199</h3>
+            <h5 id = "mixedPoloHRN_2">грн</h5>
+                    
+                    
+                    
+                    
+            </div>
+            </div>
+        </div>
+</div>
+        
+         
+     <div class = "row">     
+        <div class = "col-sm-6 col-md-4">
+            <div class = "thumbnail" id = "sitsiliano">
+        <img src = "assets/images/pizza_5.jpg">
+        <div class = "caption">
+                <h3 class = "pizzaName">Сициліано</h3>
+                <h6 class = "meatPizza">М'ясна піца</h6>
+                <p class = "pizzaDescription">
+                Шинка, салямі, курка, сир моцарелла, шампіньйони, перець болгарський, соус томатний 
+                </p>
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "sitsilianoGly_1_1">30</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "sitsilianoGly_1_2">450</span> 
+            
+            <h3 id = "sitsilianoPriceF">111</h3>
+            <h5 id = "sitsilianoHRN_1">грн</h5>
+            
+            
+             <span class="glyphicon glyphicon-ban-circle" id = "sitsilianoGly_2_1">40</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "sitsilianoGly_2_2">840</span> 
+            
+            <h3 id = "sitsilianoPriceS">199</h3>
+            <h5 id = "sitsilianoHRN_2">грн</h5>
+            
+            
+            </div>
+            </div>
+        </div>
+        
+        <div class = "col-sm-6 col-md-4">
+            <div class = "thumbnail" id = "margaryta">
+        <img src = "assets/images/pizza_3.jpg">
+        <div class = "caption">
+                <h3 class = "pizzaName">Маргарита</h3>
+                <h6 class = "vegeterianPizza">Вегетеріанська піца</h6>
+                <p class = "pizzaDescription">
+                Сир моцарелла, сир домашній, помідори, базилік, оливкова олія, соус томатний 
+                </p>
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "margarytaGly_1_1">30</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "margarytaGly_1_2" >370</span> 
+            
+            <h3 id = "margarytaPriceF">89</h3>
+            <h5 id = "margarytaHRN_1">грн</h5>
+            
+            
+            </div>
+            </div>
+        </div>
+        
+        <div class = "col-sm-6 col-md-4">
+            <div class = "thumbnail" id = "mixedTastes">
+        <img src = "assets/images/pizza_6.jpg">
+        <div class = "caption">
+                <h3 class = "pizzaName">Мікс смаків</h3>
+                <h6 class = "mushroomsPizza">З грибами</h6>
+                <p class = "pizzaDescription">
+               Ковбаски, сир моцарелла, шампінйони, ананаси, цибуля кримська, огірки квашені, соус гірчичний
+                </p>
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "mixedTastesGly_1_1">30</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "mixedTastesGly_1_2">470</span> 
+            
+            <h3 id = "mixedTastesPriceF">115</h3>
+            <h5 id =  "mixedTastesGlyHRN_1">грн</h5>
+            
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "mixedTastesGly_2_1">40</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "mixedTastesGly_2_2">780</span> 
+            
+            <h3 id = "mixedTastesPriceS">180</h3>
+            <h5 id =  "mixedTastesGlyHRN_2">грн</h5>
+            
+            </div>
+            </div>
+        </div>
+        
+          </div>  
+         
+         <div class = "row">
+        <div class = "col-sm-6 col-md-4">
+            <div class = "thumbnail" id = "dolcheMare">
+        <img src = "assets/images/pizza_8.jpg">
+        <div class = "caption">
+                <h3 class = "pizzaName">Дольче Маре</h3>
+                <h6 class = "meatPizza">З морепродуктами</h6>
+                <p class = "pizzaDescription">
+                Креветки тигрові, мідії, ікра червона, філе червоної риби, сир моцарелла, оливкова олія, вершки
+                </p>
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "dolcheMareGly_1">40</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "dolcheMareGly_2">845</span> 
+            
+            <h3 id = "dolcheMarePriceF">399</h3>
+            <h5 id = "dolcheMarePriceHRN">грн</h5>
+            
+            
+            </div>
+            </div>
+        </div>
+        
+        <div class = "col-sm-6 col-md-4">
+            <div class = "thumbnail" id = "rossoGusto">
+        <img src = "assets/images/pizza_4.jpg">
+                <div class = "caption">
+                <h3 class = "pizzaName">Россо Густо</h3>
+                <h6 class = "meatPizza">З морепродуктами</h6>
+                <p class = "pizzaDescription">
+                
+Ікра червона, лосось копчений, сир моцарелла, оливкова олія, вершки
+                </p>
+            
+            <span class="glyphicon glyphicon-ban-circle" id = "rossoGustoGly_1_1">30</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "rossoGustoGly_1_2">400</span> 
+            
+            <h3 id = "rossoGustoPriceF">189</h3>
+            <h5 id = "rossoGustoHRN_1">грн</h5>
+            
+                    
+                    
+            <span class="glyphicon glyphicon-ban-circle" id = "rossoGustoGly_2_1">40</span> 
+            <br>
+            <span class="glyphicon glyphicon-glass" id = "rossoGustoGly_2_2">700</span> 
+            
+            <h3 id = "rossoGustoPriceS">299</h3>
+            <h5 id = "rossoGustoHRN_2">грн</h5>
+                    
+                    
+                    
+            </div>
+                
+            </div>
+        </div>
+            
+        
+    </div>
+            
+    <div class = "pizzaCart_footer">
+        <h5 class = "remark">Pizza site - Практичний поект в межах курсу JavaScript <br> 
+         <h5  class = "author">created by Alina Shevchuk (FI -2)</h5>   </h5>
+    </div>    
+        
+    </div>  
+    
+    <div id = "orderPanel">
+      <div id = "orderPanel_header"> 
+       </div>
+
+        <h4 class = "mess1">Пусто в холодильнику?</h4>
+        <h4 class = "mess2">Замовте піцу</h4>
+        
+        <div id = "orderPanel_footer">
+            <button type="button" class="btn btn-warning" id = "orderButton"><h4 class = "orderButton_text">Замовити</h4></button>
+    </div>
+        
+        
+        <a href="#" id = "orders_logo"> Замовлення <span class="badge progress-bar-warning"  id="orders_logo_num">0</span></a>
+        <button type="button" class="btn btn-default" id = "cleanButton">Очистити кошик</button>
+        
+        </div>
+    
+    
+    
+    <div class="btn-group" role="toolbar" id = "tastesButton">  
+        
+    <button type="button" class="btn btn-warning" id = "allPizzasButton">Усі</button>
+    
+    <button type="button" class="btn btn-warning" id = "meatPizzasButton">М'ясні</button>
+    
+    <button type="button" class="btn btn-warning" id = "pineapplePizzasButton">З ананасом</button>
+    
+    <button type="button" class="btn btn-warning" id = "mushroomsPizzasButton">З грибами</button>
+    
+    <button type="button" class="btn btn-warning" id = "seafoodPizzasButton">З морепродуктами</button>
+    
+    <button type="button" class="btn btn-warning" id = "vegeterianPizzasButton">Вегетеріанська</button>
+    
+   </div>
+    
+    
+    <button type="button" class="btn btn-warning " id = "buyButtonImpresa1" >Купити</button> 
+    <button type="button" class="btn btn-warning" id = "buyButtonImpresa2" >Купити</button>
+    
+    <button type="button" class="btn btn-warning" id = "buyButtonBBQ_1">Купити</button>        
+    <button type="button" class="btn btn-warning" id = "buyButtonBBQ_2">Купити</button>
+    
+    <button type="button" class="btn btn-warning" id = "buyButtonMixedPolo_1">Купити</button>        
+    <button type="button" class="btn btn-warning" id = "buyButtonMixedPolo_2">Купити</button>
+    
+    <button type="button" class="btn btn-warning" id = "buyButtonSitsiliano_1">Купити</button>
+    <button type="button" class="btn btn-warning" id = "buyButtonSitsiliano_2">Купити</button> 
+    
+    <button type="button" class="btn btn-warning" id = "buyButtonmargaryta">Купити</button>
+    
+    <button type="button" class="btn btn-warning" id = "buyButtonMixedTastes_1">Купити</button>
+    <button type="button" class="btn btn-warning" id = "buyButtonMixedTastes_2">Купити</button>
+    
+    <button type="button" class="btn btn-warning" id = "buyButtonDolcheMare">Купити</button>  
+    
+    <button type="button" class="btn btn-warning" id = "buyButtonRossoGusto_1">Купити</button>        
+    <button type="button" class="btn btn-warning" id = "buyButtonRossoGusto_2">Купити</button>
+    
+    
+    
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+</body>
+</html>
+<!--http://quirktools.com/screenfly/#u=http%3A//127.0.0.1%3A50687/Frontend/www/index.html&w=640&h=480&a=4 -->
