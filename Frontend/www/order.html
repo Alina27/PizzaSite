@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet" type="text/css" href="assets/less/main_order.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <link rel="stylesheet" type="text/css" href="assets/less/main_template.less" />
+    
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+
+    <div id = "headPanel">
+    <h3 class = "number"> (+380) 98 31 98 895 </h3>
+        <h5 class = "work_time">24 години/ днів на тиждень</h5>
+        <h4 class = "delivery_message">Безкоштовна доставка піци</h4>
+        <button type="button" class="btn btn-warning" id = "enterButton">Ввійти</button>
+        <hr class = "headPanelLine">
+        <h4 class = "pizza"> Pizza </h4>
+    </div>
+    
+    
+    <div id = "logo_head">
+        <h4 class = "logo_text"> Alina's <br> PIZZA </h4>
+    </div>
+   
+     <div class = "pizza-card">
+    <div id = "discount_label">
+        <h3 class = "discount_message">Цього <br> тижня <br> на все </h3>  
+        <hr class="label_line"></hr>
+         <h4 class = "discount_persent"> -20%</h4>
+     </div>
+    
+  
+    <div class = "pizzaCart_footer">
+        <h5 class = "remark">Pizza site - Практичний поект в межах курсу JavaScript <br> 
+         <h5  class = "author">created by Alina Shevchuk (FI -2)</h5>   </h5>
+    </div>   
+    </div>  
+    
+    <div class = "kontactInf">
+        <ol>
+            <li> <h4 class = "inf">1.Контактна інформація </h4></li>
+            <form role = "form">
+                <div class = "NameForm">
+                    <label class = "name">Ім'я</label>
+                    <input type = "name" class = "namePlace" placeholder = "Ім'я та Прізвище">
+                </div>
+                
+                <div class = "PhoneForm">
+                    <label class = "phone">Телефон</label>
+                    <input type = "phone" class = "phonePlace" placeholder = "+380983198895">
+                </div>
+                
+                <div class = "HomePlaceForm">
+                    <label class = "home">Адреса</label>
+                    <input type = "home" class = "homePlace" placeholder = "Київ, вул.Спвська, 2">
+                </div>
+                
+            </form>
+        </ol>    
+    </div>
+    
+    <div class = "deliveryForm">
+            <label class = "d1">Інформація про замовлення</label>
+            <label class = "d2">Приблизний час доставки: <label class = "delTime">невідомий</label> </label>
+            <label class = "d3">Адреса доставки: <label class = "delPlace">невідома</label></label>
+           </div> 
+    
+    <button type="button" class="btn btn-warning " id = "nextButton" >Далі</button> 
+    
+    
+    <div id = "orderPanel">
+      <div id = "orderPanel_header"> 
+       </div>
+
+        <h4 class = "mess1">Пусто в холодильнику?</h4>
+        <h4 class = "mess2">Замовте піцу</h4>
+        
+        <div id = "orderPanel_footer">
+            <button type="button" class="btn btn-default" id = "redagButton"><h4 class = "redagButton_text">Редагувати замовлення</h4></button>
+    </div>
+        
+        
+        <a href="#" id = "orders_logo"> Замовлення <span class="badge progress-bar-warning"  id="orders_logo_num">0</span></a>
+        <button type="button" class="btn btn-default" id = "cleanButton">Очистити кошик</button>
+        
+        </div>
+    
+
+    
+
+    
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+</body>
+</html>

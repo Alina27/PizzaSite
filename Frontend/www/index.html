@@ -9,6 +9,7 @@
 
     <!-- LESS основний файл -->
     <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <link rel="stylesheet" type="text/css" href="assets/less/main_template.less" />   
     <!-- LESS JavaScript компілятор -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 
@@ -99,6 +100,11 @@
             
     <a href="#" id = "allPizzas"> Усі піци <span class="badge progress-bar-warning"  id="allPizzas_num">8</span></a>
     
+    <script type = "text/template">
+    
+    
+    </script>
+   <!--
     <div class = "row">
     <div class = "col-sm-6 col-md-4"> 
             <div class = "thumbnail" id = "imrezza">  
@@ -339,11 +345,9 @@
             </div>
                 
             </div>
-        </div>
-            
-        
+        </div>    
     </div>
-            
+    -->
     <div class = "pizzaCart_footer">
         <h5 class = "remark">Pizza site - Практичний поект в межах курсу JavaScript <br> 
          <h5  class = "author">created by Alina Shevchuk (FI -2)</h5>   </h5>
@@ -359,7 +363,7 @@
         <h4 class = "mess2">Замовте піцу</h4>
         
         <div id = "orderPanel_footer">
-            <button type="button" class="btn btn-warning" id = "orderButton"><h4 class = "orderButton_text">Замовити</h4></button>
+            <button type="button" class="btn btn-warning" id = "orderButton" onclick="transferToOrder();"><h4 class = "orderButton_text">Замовити</h4></button>
     </div>
         
         
@@ -409,7 +413,24 @@
     <button type="button" class="btn btn-warning" id = "buyButtonRossoGusto_1">Купити</button>        
     <button type="button" class="btn btn-warning" id = "buyButtonRossoGusto_2">Купити</button>
     
+    <div class = "list">
+    </div>
     
+ <!--   <div class = "order_Template">
+        <div class = "impresa_smallPanel">Імпреза (Мала)
+        
+    <span class="glyphicon glyphicon-ban-circle" id = "impresaGly_1_1_templ">30</span> 
+        <br>
+    <span class="glyphicon glyphicon-glass" id = "impresaGly_1_2_templ">370</span> 
+    <button class="roundRedImprSm_templ" > -
+  <!--  <h1 class = "minusImprSm_templ"> - </h1> 
+     </button> 
+    <h4 class = "oneImprSm_template"> 1 </h4>  
+    <button class="roundGreenroundRedImprSm_templ">+ </button>
+    <img src = "assets/images/pizza_2.jpg" id = "impSm"> 
+            
+            </div>
+    </div>  -->
     
 <!-- jQuery JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
@@ -418,7 +439,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
-<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
 </body>
 </html>
 <!--http://quirktools.com/screenfly/#u=http%3A//127.0.0.1%3A50687/Frontend/www/index.html&w=640&h=480&a=4 -->

@@ -201,6 +201,16 @@ $(function(){
 
     PizzaCart.initialiseCart();
     PizzaMenu.initialiseMenu();
+    Pizza_List
+    
+    var $order_but = $("#orderButton");
+        
+    $order_but.click(function(){
+      
+        window.location.href="http://127.0.0.1:49667/Frontend/www/order.html";
+        
+    });  
+    
 
 
 });
@@ -220,11 +230,13 @@ var PizzaSize = {
 var Cart = [];
 
 //HTML едемент куди будуть додаватися піци
-var $cart = $("#cart");
+var $cart = $("#cart"); 
+    
+//var $cart = $(".pizza-card");
 
 function addToCart(pizza, size) {
     //Додавання однієї піци в кошик покупок
-
+      
     //Приклад реалізації, можна робити будь-яким іншим способом
     Cart.push({
         pizza: pizza,
@@ -235,6 +247,12 @@ function addToCart(pizza, size) {
     //Оновити вміст кошика на сторінці
     updateCart();
 }
+    
+    
+    /*
+    $buyButtonImpresa1.click(function(){
+        addToCart(pizza_info.concat(),PizzaSize.Small);
+    });  */
 
 function removeFromCart(cart_item) {
     //Видалити піцу з кошика
@@ -313,10 +331,10 @@ function showPizzaList(list) {
 
         var $node = $(html_code);
 
-        $node.find(".buy-big").click(function(){
+        $node.find("#buyButtonImpresa1").click(function(){
             PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Big);
         });
-        $node.find(".buy-small").click(function(){
+        $node.find("#buyButtonImpresa2").click(function(){
             PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Small);
         });
 
@@ -874,6 +892,10 @@ Template.prototype = {
       , d = this.opts.delimiter;
 
     if (matches && matches.length) {
+      if (this.opts.compileDebug && this.opts.filename) {
+        this.source =  '    ; __lines = ' + JSON.stringify(this.templateText) + '\n';
+        this.source += '    ; __filename = "' + this.opts.filename.replace(/\\/g,  '/') + '"\n';
+      }
       matches.forEach(function (line, index) {
         var opening
           , closing
@@ -1057,6 +1079,12 @@ Template.prototype = {
     }
   }
 };
+
+/*
+ * Export the internal function for escaping XML so people
+ * can use for manual escaping if needed
+ * */
+exports.escapeXML = utils.escapeXML;
 
 /**
  * Express.js support.
@@ -1251,7 +1279,7 @@ module.exports={
     "engine",
     "ejs"
   ],
-  "version": "2.4.1",
+  "version": "2.4.2",
   "author": {
     "name": "Matthew Eernisse",
     "email": "mde@fleegix.org",
@@ -1290,16 +1318,17 @@ module.exports={
   },
   "scripts": {
     "test": "mocha",
+    "sample": "npm install express && node sample/index.js",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha",
     "doc": "rimraf out && jsdoc -c jsdoc.json lib/* docs/jsdoc/*",
     "devdoc": "rimraf out && jsdoc -p -c jsdoc.json lib/* docs/jsdoc/*"
   },
-  "_id": "ejs@2.4.1",
-  "_shasum": "82e15b1b2a1f948b18097476ba2bd7c66f4d1566",
-  "_resolved": "https://registry.npmjs.org/ejs/-/ejs-2.4.1.tgz",
+  "_id": "ejs@2.4.2",
+  "_shasum": "7057eb4812958fb731841cd9ca353343efe597b1",
+  "_resolved": "https://registry.npmjs.org/ejs/-/ejs-2.4.2.tgz",
   "_from": "ejs@>=2.4.1 <3.0.0",
-  "_npmVersion": "2.10.1",
-  "_nodeVersion": "0.12.4",
+  "_npmVersion": "2.15.1",
+  "_nodeVersion": "4.4.4",
   "_npmUser": {
     "name": "mde",
     "email": "mde@fleegix.org"
@@ -1315,11 +1344,14 @@ module.exports={
     }
   ],
   "dist": {
-    "shasum": "82e15b1b2a1f948b18097476ba2bd7c66f4d1566",
-    "tarball": "http://registry.npmjs.org/ejs/-/ejs-2.4.1.tgz"
+    "shasum": "7057eb4812958fb731841cd9ca353343efe597b1",
+    "tarball": "https://registry.npmjs.org/ejs/-/ejs-2.4.2.tgz"
   },
-  "directories": {},
-  "readme": "ERROR: No README data found!"
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ejs-2.4.2.tgz_1464117640663_0.8193834638223052"
+  },
+  "directories": {}
 }
 
 },{}],9:[function(require,module,exports){
@@ -1562,6 +1594,9 @@ var currentQueue;
 var queueIndex = -1;
 
 function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
     draining = false;
     if (currentQueue.length) {
         queue = currentQueue.concat(queue);
